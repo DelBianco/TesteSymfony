@@ -1,0 +1,19 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <h1> Registro de Usuário </h1>
+    
+    <form action="{{ path('user_register') }}" method="POST" >
+        {{ form_errors(form) }}
+        
+        {{ form_widget(form.username, {'attr': {'class': 'form-control', 'placeholder': 'Nome de Usuário' }, 'label':'' }) }}
+        {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'E-mail' }, 'label':'' }) }}
+        {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control', 'placeholder': 'Senha' }, 'label':'' }) }}
+        {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control', 'placeholder': 'Senha Novamente' }, 'label':'' }) }}
+        
+        {{ form_rest(form) }}
+        <hr />
+        <input type="submit" class="btn btn-lg btn-primary " value="Enviar" formnovalidate />
+    </form>
+{% endblock %}
+

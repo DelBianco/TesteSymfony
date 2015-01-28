@@ -1,0 +1,5 @@
+_assetic:
+    resource: .
+    type: assetic
+_app:
+    resource: /home/andre/Git/Form_eventWeb/Event_web/app/config/routing_dev.yml

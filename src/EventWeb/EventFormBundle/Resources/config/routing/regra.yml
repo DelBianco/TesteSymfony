@@ -1,0 +1,30 @@
+regra:
+    path:     /
+    defaults: { _controller: "EventFormBundle:Regra:index" }
+
+regra_show:
+    path:     /{id}/show
+    defaults: { _controller: "EventFormBundle:Regra:show" }
+
+regra_new:
+    path:     /new
+    defaults: { _controller: "EventFormBundle:Regra:new" }
+
+regra_create:
+    path:     /create
+    defaults: { _controller: "EventFormBundle:Regra:create" }
+    requirements: { _method: post }
+
+regra_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EventFormBundle:Regra:edit" }
+
+regra_update:
+    path:     /{id}/update
+    defaults: { _controller: "EventFormBundle:Regra:update" }
+    requirements: { _method: post|put }
+
+regra_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EventFormBundle:Regra:delete" }
+    requirements: { _method: post|delete }

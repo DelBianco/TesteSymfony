@@ -1,0 +1,30 @@
+sistemadesocios:
+    path:     /
+    defaults: { _controller: "EventFormBundle:SistemaDeSocios:index" }
+
+sistemadesocios_show:
+    path:     /{id}/show
+    defaults: { _controller: "EventFormBundle:SistemaDeSocios:show" }
+
+sistemadesocios_new:
+    path:     /new
+    defaults: { _controller: "EventFormBundle:SistemaDeSocios:new" }
+
+sistemadesocios_create:
+    path:     /create
+    defaults: { _controller: "EventFormBundle:SistemaDeSocios:create" }
+    requirements: { _method: post }
+
+sistemadesocios_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EventFormBundle:SistemaDeSocios:edit" }
+
+sistemadesocios_update:
+    path:     /{id}/update
+    defaults: { _controller: "EventFormBundle:SistemaDeSocios:update" }
+    requirements: { _method: post|put }
+
+sistemadesocios_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EventFormBundle:SistemaDeSocios:delete" }
+    requirements: { _method: post|delete }

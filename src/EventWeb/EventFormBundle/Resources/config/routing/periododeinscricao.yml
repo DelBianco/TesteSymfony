@@ -1,0 +1,30 @@
+periododeinscricao:
+    path:     /
+    defaults: { _controller: "EventFormBundle:PeriodoDeInscricao:index" }
+
+periododeinscricao_show:
+    path:     /{id}/show
+    defaults: { _controller: "EventFormBundle:PeriodoDeInscricao:show" }
+
+periododeinscricao_new:
+    path:     /new
+    defaults: { _controller: "EventFormBundle:PeriodoDeInscricao:new" }
+
+periododeinscricao_create:
+    path:     /create
+    defaults: { _controller: "EventFormBundle:PeriodoDeInscricao:create" }
+    requirements: { _method: post }
+
+periododeinscricao_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EventFormBundle:PeriodoDeInscricao:edit" }
+
+periododeinscricao_update:
+    path:     /{id}/update
+    defaults: { _controller: "EventFormBundle:PeriodoDeInscricao:update" }
+    requirements: { _method: post|put }
+
+periododeinscricao_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EventFormBundle:PeriodoDeInscricao:delete" }
+    requirements: { _method: post|delete }

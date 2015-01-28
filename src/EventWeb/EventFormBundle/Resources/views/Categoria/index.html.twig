@@ -1,0 +1,29 @@
+{% extends 'EventFormBundle::sidebar.html.twig' %}
+{% block main -%}
+    <h1>Categoria list</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id Categoria</th>
+                <th>Evento</th>
+                <th>Nome</th>
+                <th>Descricao</th>
+                <th>Comprovante</th>
+                <th>Exigecompparaliberarpagamento</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('categoria_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td><a href="#">{{ entity.Evento }}</a></td>
+                <td>{{ entity.nome }}</td>
+                <td>{{ entity.descricao }}</td>
+                <td>{{ entity.comprovante }}</td>
+                <td>{{ entity.exigeCompParaLiberarPagamento }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}

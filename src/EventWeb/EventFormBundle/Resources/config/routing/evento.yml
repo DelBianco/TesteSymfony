@@ -1,0 +1,31 @@
+evento:
+    path:     /
+    defaults: { _controller: "EventFormBundle:Evento:index" }
+
+evento_show:
+    path:     /{id}/show
+    defaults: { _controller: "EventFormBundle:Evento:show" }
+
+evento_new:
+    path:     /new
+    defaults: { _controller: "EventFormBundle:Evento:new" }
+    requirements: { _method: post|get }
+
+evento_create:
+    path:     /create
+    defaults: { _controller: "EventFormBundle:Evento:create" }
+    requirements: { _method: post }
+
+evento_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EventFormBundle:Evento:edit" }
+
+evento_update:
+    path:     /{id}/update
+    defaults: { _controller: "EventFormBundle:Evento:update" }
+    requirements: { _method: post|put }
+
+evento_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EventFormBundle:Evento:delete" }
+    requirements: { _method: post|delete }

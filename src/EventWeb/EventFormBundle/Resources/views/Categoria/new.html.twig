@@ -1,0 +1,25 @@
+{% extends 'EventFormBundle::sidebar.html.twig' %}
+{% block main -%}
+<h1> Nova Categoria </h1>
+<form id="formTwoActions" action="" method="POST" >
+    {{ form_errors(form) }}
+    {{ form_row(form.Nome,                           {'attr': {'class': 'form-control'}, 'label':'Nome da Categoria' }) }}
+    {{ form_row(form.Descricao,                      {'attr': {'class': 'form-control'}, 'label':'Descrição da Categoria' }) }}
+    {{ form_row(form.ExigeCompParaLiberarPagamento,  {'attr': {'class': 'bootstrap-switch bootstrap-switch-on bootstrap-switch-small bootstrap-switch-animate'}, 'label':'Exigir comprovante e validar para liberar o método de pagamento? ' }) }}
+    {{ form_rest(form) }}
+    <hr />
+    <a class="btn btn-lg btn-success"  onclick="adicionaMaisCategorias()" > Adicionar Mais Categorias</a>
+    <a class="btn btn-lg btn-primary"  onclick="proximoPasso()" > <i class="icon-plus icon-white"></i> Proximo Passo  </a>
+<script>
+    form=document.getElementById("formTwoActions");
+    function adicionaMaisCategorias() {
+        form.action="{{ path('categoria_adicionarMaisCategorias', {'evento_id':evento_id}) }}";
+        form.submit();
+    }
+    function proximoPasso() {
+        form.action="{{ path('categoria_PersisteEProximo', {'evento_id':evento_id}) }}";
+        form.submit();
+    }
+ 
+</script>
+{% endblock %}

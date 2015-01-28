@@ -1,0 +1,8 @@
+user:
+    resource: "@UserBundle/Controller"
+    prefix:   /
+    type: annotation
+
+event_form:
+    resource: "@EventFormBundle/Resources/config/routing.yml"
+    prefix:   /

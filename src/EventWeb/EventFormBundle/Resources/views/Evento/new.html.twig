@@ -1,0 +1,18 @@
+{% extends 'EventFormBundle::sidebar.html.twig' %}
+
+{% block main -%}
+<h1> Novo Evento </h1>
+    <form action="#" method="POST" >
+        
+        {{ form_errors(form) }}
+        {{ form_row(form.Nome,     {'attr': {'class': 'form-control'}, 'label':'Nome do Evento' }) }}
+        {{ form_row(form.Inicio,   {'label':'Data de inicio' }) }}
+        {{ form_row(form.Fim,      {'label':'Data de termino' }) }}
+        {{ form_row(form.Cidade,   {'attr': {'class': 'form-control'}, 'label':'Cidade' }) }}
+        {{ form_row(form.Email,    {'attr': {'class': 'form-control'}, 'label':'Email' }) }}
+        {{ form_row(form.Telefone, {'attr': {'class': 'form-control'}, 'label':'Telefone' }) }}
+        {{ form_rest(form) }}
+        <hr />
+        <input type="submit" class="btn btn-lg btn-primary " value="Prosseguir" formnovalidate />
+    </form>
+{% endblock %}

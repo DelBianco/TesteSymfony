@@ -1,0 +1,24 @@
+{% extends 'EventFormBundle::sidebar.html.twig' %}
+{% block main -%}
+<h1> Nova Categoria </h1>
+<form id="formTwoActions" action="" method="POST" >
+    {{ form_errors(form) }}
+    {{ form_row(form.Nome,                           {'attr': {'class': 'form-control'}, 'label':'Nome do Metodo' }) }}
+    {{ form_row(form.Tipo,                      {'attr': {'class': 'form-control'}, 'label':'Tipo do Metodo' }) }}
+    {{ form_rest(form) }}
+    <hr />
+    <a class="btn btn-lg btn-success"  onclick="adicionaMaisMetodos()" > Adicionar Mais Metodos</a>
+    <a class="btn btn-lg btn-primary"  onclick="proximoPasso()" > <i class="icon-plus icon-white"></i> Proximo Passo  </a>
+<script>
+    form=document.getElementById("formTwoActions");
+    function adicionaMaisCategorias() {
+        form.action="{{ path('metododepagamento_new', {'evento_id':evento_id}) }}";
+        form.submit();
+    }
+    function proximoPasso() {
+        form.action="{{ path('evento')}}";
+        form.submit();
+    }
+ 
+</script>
+{% endblock %}

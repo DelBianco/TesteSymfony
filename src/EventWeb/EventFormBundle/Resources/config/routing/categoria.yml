@@ -1,0 +1,40 @@
+categoria:
+    path:     /
+    defaults: { _controller: "EventFormBundle:Categoria:index" }
+
+categoria_show:
+    path:     /{id}/show
+    defaults: { _controller: "EventFormBundle:Categoria:show" }
+
+categoria_new:
+    path:     /new/{evento_id}
+    defaults: { _controller: "EventFormBundle:Categoria:new" }
+
+categoria_adicionarMaisCategorias:
+    path:     /adicionarMaisCategorias/{evento_id}
+    defaults: { _controller: "EventFormBundle:Categoria:adicionarMaisCategorias" }
+    requirements: { _method: post }
+    
+categoria_PersisteEProximo:
+    path:     /PersisteEProximo/{evento_id}
+    defaults: { _controller: "EventFormBundle:Categoria:PersisteEProximo" }
+    requirements: { _method: post }
+    
+categoria_create:
+    path:     /create
+    defaults: { _controller: "EventFormBundle:Categoria:create" }
+    requirements: { _method: post }
+
+categoria_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EventFormBundle:Categoria:edit" }
+
+categoria_update:
+    path:     /{id}/update
+    defaults: { _controller: "EventFormBundle:Categoria:update" }
+    requirements: { _method: post|put }
+
+categoria_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EventFormBundle:Categoria:delete" }
+    requirements: { _method: post|delete }

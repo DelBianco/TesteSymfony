@@ -1,0 +1,5 @@
+services:
+#    FormUser.listener.user_listener:
+#        class: EventWeb\UserBundle\Listener\UserListener
+#        tags:
+#            - { name: doctrine.event_listener, event: prePersist }

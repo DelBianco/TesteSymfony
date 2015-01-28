@@ -1,0 +1,30 @@
+metododepagamento:
+    path:     /
+    defaults: { _controller: "EventFormBundle:MetodoDePagamento:index" }
+
+metododepagamento_show:
+    path:     /{id}/show
+    defaults: { _controller: "EventFormBundle:MetodoDePagamento:show" }
+
+metododepagamento_new:
+    path:     /new/{evento_id}
+    defaults: { _controller: "EventFormBundle:MetodoDePagamento:new" }
+
+metododepagamento_create:
+    path:     /create
+    defaults: { _controller: "EventFormBundle:MetodoDePagamento:create" }
+    requirements: { _method: post }
+
+metododepagamento_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EventFormBundle:MetodoDePagamento:edit" }
+
+metododepagamento_update:
+    path:     /{id}/update
+    defaults: { _controller: "EventFormBundle:MetodoDePagamento:update" }
+    requirements: { _method: post|put }
+
+metododepagamento_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EventFormBundle:MetodoDePagamento:delete" }
+    requirements: { _method: post|delete }

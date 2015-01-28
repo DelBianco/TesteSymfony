@@ -1,0 +1,31 @@
+event_form_sistemadesocios:
+    resource: "@EventFormBundle/Resources/config/routing/sistemadesocios.yml"
+    prefix:   /sistemadesocios
+
+event_form_periododeinscricao:
+    resource: "@EventFormBundle/Resources/config/routing/periododeinscricao.yml"
+    prefix:   /periododeinscricao
+
+event_form_metododepagamento:
+    resource: "@EventFormBundle/Resources/config/routing/metododepagamento.yml"
+    prefix:   /metododepagamento
+
+event_form_categoria:
+    resource: "@EventFormBundle/Resources/config/routing/categoria.yml"
+    prefix:   /categoria
+
+event_form_acompanhantes:
+    resource: "@EventFormBundle/Resources/config/routing/acompanhantes.yml"
+    prefix:   /acompanhantes
+
+event_form_regra:
+    resource: "@EventFormBundle/Resources/config/routing/regra.yml"
+    prefix:   /regra
+
+event_form_periodo:
+    resource: "@EventFormBundle/Resources/config/routing/periodo.yml"
+    prefix:   /periodo
+
+event_form_evento:
+    resource: "@EventFormBundle/Resources/config/routing/evento.yml"
+    prefix:   /evento
